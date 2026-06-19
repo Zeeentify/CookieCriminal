@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://o62a6iahpudn"]
 
-[ext_resource type="Script" uid="uid://kjf25iys2yql" path="res://soundscripz.gd" id="1_httbr"]
+[ext_resource type="Script" uid="uid://kjf25iys2yql" path="res://entities/player/suspicion_bar/soundscripz.gd" id="1_httbr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_httbr"]
 

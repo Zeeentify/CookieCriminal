@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://bnpwqxodghq2e"]
-
-[ext_resource type="PackedScene" uid="uid://dhfpobrarucm1" path="res://entities/maps/main.tscn" id="1_jcixq"]
-
-[node name="Bunga" type="Node3D" unique_id=619562993]
-
-[node name="Main" parent="." unique_id=2093638446 instance=ExtResource("1_jcixq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.617919, 0, -1.0715849)
