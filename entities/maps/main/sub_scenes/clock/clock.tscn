@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dxsbthm2m3jd3"]
+
+[ext_resource type="PackedScene" uid="uid://b543iktmxkkae" path="res://entities/maps/main/sub_scenes/clock/clock.blend" id="1_wlrf0"]
+
+[node name="Clock" type="Node3D" unique_id=540062113]
+
+[node name="clock" parent="." unique_id=141487353 instance=ExtResource("1_wlrf0")]

@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cca1egqnnxr45"]
+
+[ext_resource type="PackedScene" uid="uid://lm6iav3qcrhh" path="res://entities/maps/main/sub_scenes/ceiling_fan/ceiling_fan.blend" id="1_m8yjh"]
+
+[node name="CeilingFan" type="Node3D" unique_id=1758494838]
+
+[node name="ceiling_fan" parent="." unique_id=467150277 instance=ExtResource("1_m8yjh")]

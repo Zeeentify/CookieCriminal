@@ -39,3 +39,5 @@ enabled=PackedStringArray("res://addons/func_godot/plugin.cfg")
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+scaling_3d/mode=5
+scaling_3d/scale=0.33330000000000004

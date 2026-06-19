@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://v2wtkcd3qpyb"]
+
+[ext_resource type="PackedScene" uid="uid://d234bornbt88o" path="res://entities/maps/main/sub_scenes/tv/tv.blend" id="1_kpkg6"]
+
+[node name="Tv" type="Node3D" unique_id=643700536]
+
+[node name="tv" parent="." unique_id=1580198439 instance=ExtResource("1_kpkg6")]
