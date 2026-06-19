@@ -1,7 +1,8 @@
 extends ProgressBar
 
 @onready var progress_bar: ProgressBar = $"."
-@export var drainspeed: float = 0.006
+@export var drainspeed: float = 0.004
+@onready var rich_text_label: RichTextLabel = $"../RichTextLabel"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -10,6 +11,27 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
+	if progress_bar.value  >= 0.7:
+		rich_text_label.visible = true
+	else:
+		rich_text_label.visible = false
+			
+		
+		
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
 	if progress_bar.value < 0.5:
 		progress_bar.modulate = Color.AQUA
 	
