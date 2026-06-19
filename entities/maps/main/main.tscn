@@ -9,9 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://h31tot4yfifw" path="res://entities/maps/main/sub_scenes/bed/Bed.blend" id="8_jswjf"]
 [ext_resource type="PackedScene" uid="uid://hpeqekpwgso8" path="res://entities/maps/main/sub_scenes/bedside_table/night_table.blend" id="9_0tosw"]
 [ext_resource type="PackedScene" uid="uid://v2wtkcd3qpyb" path="res://entities/maps/main/sub_scenes/tv/tv.tscn" id="9_ontxy"]
-[ext_resource type="ArrayMesh" uid="uid://cibtki3m42c1y" path="res://entities/maps/main/props/props_carpet_1.res" id="10_0tosw"]
+[ext_resource type="ArrayMesh" uid="uid://ds4hc03aha2n7" path="res://entities/maps/main/props/props_carpet_1.res" id="10_0tosw"]
 [ext_resource type="PackedScene" uid="uid://dxsbthm2m3jd3" path="res://entities/maps/main/sub_scenes/clock/clock.tscn" id="11_q8hqq"]
 [ext_resource type="PackedScene" uid="uid://cca1egqnnxr45" path="res://entities/maps/main/sub_scenes/ceiling_fan/ceiling_fan.tscn" id="12_wp2ly"]
+[ext_resource type="PackedScene" uid="uid://bfx8vugtdkc7t" path="res://entities/player/player.tscn" id="13_ruk62"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_wo4hg"]
 panorama = ExtResource("1_g756m")
@@ -180,3 +181,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.55410314, 2.9996002, 3.620
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="." unique_id=1146762898]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.60616946, 2.2052674, 3.4636288)
+
+[node name="Node3D" parent="." unique_id=384399534 instance=ExtResource("13_ruk62")]
+transform = Transform3D(-0.99880934, 0, 0.048784047, 0, 1, 0, -0.048784047, 0, -0.99880934, -0.59739053, 0.6107697, 1.5392499)
