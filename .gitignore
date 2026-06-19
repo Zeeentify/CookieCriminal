@@ -1,3 +1,30 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+
+# Game Build/Export Outputs
+# (Don't accidental push your compiled .exe or .pck files to GitHub)
+/builds/
+/exports/
+*.exe
+*.apk
+*.aab
+*.mac
+*.app
+*.dmg
+*.zip
+*.pck
+
+# 3D & Art Software Backups
+# Blender automatically creates .blend1 saves; you don't want these in Git
+*.blend1
+*.blend2
+# Krita autosaves and backup files
+*.kra~
+*.autosave~
+
+# System & OS garbage files
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
