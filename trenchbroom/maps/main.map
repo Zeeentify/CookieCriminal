@@ -1,0 +1,26 @@
+// Game: CookieCriminal
+// Format: Standard
+// entity 0
+{
+"wad" ""
+"classname" "worldspawn"
+"_tb_mod" "trenchbroom"
+// brush 0
+{
+( -64 -64 -16 ) ( -64 -63 -16 ) ( -64 -64 -15 ) default_texture 0 0 0 1 1
+( -64 -64 -16 ) ( -64 -64 -15 ) ( -63 -64 -16 ) default_texture 0 0 0 1 1
+( -64 -64 -16 ) ( -63 -64 -16 ) ( -64 -63 -16 ) default_texture 0 0 0 1 1
+( 64 64 16 ) ( 64 65 16 ) ( 65 64 16 ) default_texture 0 0 0 1 1
+( 64 64 16 ) ( 65 64 16 ) ( 64 64 17 ) default_texture 0 0 0 1 1
+( 64 64 16 ) ( 64 64 17 ) ( 64 65 16 ) default_texture 0 0 0 1 1
+}
+// brush 1
+{
+( -32 -64 16 ) ( -32 -63 16 ) ( -32 -64 17 ) __TB_empty 0 0 0 1 1
+( -32 -64 16 ) ( -32 -64 17 ) ( -31 -64 16 ) __TB_empty 0 0 0 1 1
+( -32 -64 16 ) ( -31 -64 16 ) ( -32 -63 16 ) __TB_empty 0 0 0 1 1
+( 0 144 96 ) ( 0 145 96 ) ( 1 144 96 ) __TB_empty 0 0 0 1 1
+( 0 144 96 ) ( 1 144 96 ) ( 0 144 97 ) __TB_empty 0 0 0 1 1
+( 0 144 96 ) ( 0 144 97 ) ( 0 145 96 ) __TB_empty 0 0 0 1 1
+}
+}
