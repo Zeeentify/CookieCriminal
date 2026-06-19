@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://o62a6iahpudn"]
+
+[ext_resource type="Script" uid="uid://kjf25iys2yql" path="res://soundscripz.gd" id="1_httbr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_httbr"]
+
+[node name="Control" type="Control" unique_id=675778821]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8.0
+offset_top = 55.0
+offset_right = -8.0
+offset_bottom = 55.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=527889389]
+layout_mode = 0
+offset_left = 1030.0
+offset_top = 230.0
+offset_right = 1066.0
+offset_bottom = 392.0
+theme_override_colors/font_color = Color(0.9887789, 0.00020561457, 0.8361749, 1)
+theme_override_colors/font_outline_color = Color(0.99916583, 0, 0.07064233, 1)
+theme_override_styles/fill = SubResource("StyleBoxFlat_httbr")
+max_value = 1.0
+value = 1.0
+fill_mode = 3
+show_percentage = false
+script = ExtResource("1_httbr")
