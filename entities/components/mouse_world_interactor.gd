@@ -16,3 +16,6 @@ func _process(delta: float) -> void:
 	if result:
 		var hit_object = result.collider
 		print("mouse is over:", hit_object.name)
+		if hit_object.name == "Criminal":
+			pass
+			
