@@ -1,15 +1,15 @@
 [gd_scene format=3 uid="uid://d0s44noisqquh"]
 
-[ext_resource type="Script" uid="uid://bpim257f4yk4j" path="res://epiccamera.gd" id="1_am4cr"]
+[ext_resource type="Script" uid="uid://bpim257f4yk4j" path="res://epiccamera.gd" id="1_ow26k"]
 
-[node name="Control" type="Control" unique_id=1997500140]
+[node name="CameraSwayUi" type="Control" unique_id=1997500140]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_am4cr")
+script = ExtResource("1_ow26k")
 
 [node name="Button" type="Button" parent="." unique_id=13919211]
 process_priority = 12

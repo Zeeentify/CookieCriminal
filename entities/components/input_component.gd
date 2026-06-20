@@ -10,14 +10,15 @@ func _unhandled_input(event: InputEvent) -> void:
 	
 	if Input.is_action_just_pressed("escape"):
 		input_escape.emit()
-	if Input.is_action_just_pressed("throw"):
-		input_throw.emit()
+	#if Input.is_action_just_pressed("throw"):
+		#input_throw.emit()
 	if Input.is_action_just_pressed("interact"):
 		input_interacted.emit()
 
-func _process(delta: float) -> void:
-	if GameUtils.is_disabled(self): 
-		input_direction = Vector2.ZERO
-		return
-	input_direction = Input.get_vector("left", "right", "forward", "backward")
-	
+#Directional Movement
+#func _process(delta: float) -> void:
+	#if GameUtils.is_disabled(self): 
+		#input_direction = Vector2.ZERO
+		#return
+	#input_direction = Input.get_vector("left", "right", "forward", "backward")
+	#
