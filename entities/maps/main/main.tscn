@@ -150,8 +150,9 @@ transform = Transform3D(-0.6167511, -0.009083406, -0.787106, -0.78698134, -0.014
 light_color = Color(0.68030167, 0.8420536, 0.92366236, 1)
 shadow_enabled = true
 
-[node name="Criminal" parent="." unique_id=867978605 instance=ExtResource("7_jflv0")]
+[node name="Criminal" parent="." unique_id=867978605 node_paths=PackedStringArray("possible_locations") instance=ExtResource("7_jflv0")]
 transform = Transform3D(0.117971145, 0, 0.993017, 0, 1, 0, -0.993017, 0, 0.117971145, -1.8140547, 0.4493891, 4.948183)
+possible_locations = [NodePath("../CriminalPossibleLocationMarkers/Marker3D")]
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=2031202159]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10542023, 1.2727315, 3.82162)
@@ -185,7 +186,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.55410314, 2.9996002, 3.620
 [node name="OmniLight3D3" type="OmniLight3D" parent="." unique_id=1146762898]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.60616946, 2.2052674, 3.4636288)
 
-[node name="Node3D" parent="." unique_id=384399534 instance=ExtResource("13_ruk62")]
+[node name="Player" parent="." unique_id=384399534 instance=ExtResource("13_ruk62")]
 transform = Transform3D(-0.99880934, 0, 0.048784047, 0, 1, 0, -0.048784047, 0, -0.99880934, -0.59739053, 0.6107697, 1.5392499)
 
-[editable path="Node3D"]
+[node name="CriminalPossibleLocationMarkers" type="Node3D" parent="." unique_id=536512939]
+
+[node name="Marker3D" type="Marker3D" parent="CriminalPossibleLocationMarkers" unique_id=363034191]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8074445, 0.90338576, 4.640312)
+
+[node name="Props" type="Node3D" parent="." unique_id=680121840]
+
+[editable path="Player"]

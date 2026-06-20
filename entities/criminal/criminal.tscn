@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://yxtk00irenq0"]
 
+[ext_resource type="Script" uid="uid://b8407hwp0po1j" path="res://entities/criminal/criminal.gd" id="1_0vjw1"]
 [ext_resource type="Script" uid="uid://d0ymghcv2c51s" path="res://entities/components/ai_navigation_component.gd" id="1_ld7n5"]
 [ext_resource type="Script" uid="uid://bgvy0s1ugj18x" path="res://entities/components/movement_component.gd" id="2_0vjw1"]
+[ext_resource type="Script" uid="uid://bkbiflqb0brh1" path="res://entities/components/rotation_component.gd" id="4_bbd8l"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ossu4"]
 
@@ -13,7 +15,11 @@ material = SubResource("StandardMaterial3D_c72ok")
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ossu4"]
 
-[node name="Criminal" type="CharacterBody3D" unique_id=1615060031]
+[node name="Criminal" type="CharacterBody3D" unique_id=1615060031 node_paths=PackedStringArray("ai_navigation_component", "movement_component", "rotation_component")]
+script = ExtResource("1_0vjw1")
+ai_navigation_component = NodePath("AiNavigationComponent")
+movement_component = NodePath("MovementComponent")
+rotation_component = NodePath("RotationComponent")
 
 [node name="CriminalMesh" type="MeshInstance3D" parent="." unique_id=867978605]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -40,3 +46,10 @@ script = ExtResource("2_0vjw1")
 body = NodePath("..")
 speed = 0.6
 metadata/_custom_type_script = "uid://bgvy0s1ugj18x"
+
+[node name="RotationComponent" type="Node" parent="." unique_id=2702194 node_paths=PackedStringArray("body", "target")]
+script = ExtResource("4_bbd8l")
+body = NodePath("..")
+target = NodePath("../CriminalMesh")
+rotation_speed = 87.0
+yaw_offset = 21.625

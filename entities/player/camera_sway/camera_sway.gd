@@ -16,7 +16,7 @@ var is_hovering2:bool = false
 func _lookleft(delta: float)-> void:
 	if camera_3d.rotation.y  > deg_to_rad(40):
 		return
-	print(camera_3d.rotation.y)
+	#print(camera_3d.rotation.y)
 	if is_hovering:
 		camera_3d.rotate_y(1.45 * delta)
 	
