@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://yxtk00irenq0"]
+
+[ext_resource type="Script" uid="uid://d0ymghcv2c51s" path="res://entities/components/ai_navigation_component.gd" id="1_ld7n5"]
+[ext_resource type="Script" uid="uid://bgvy0s1ugj18x" path="res://entities/components/movement_component.gd" id="2_0vjw1"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ossu4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c72ok"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ossu4"]
+material = SubResource("StandardMaterial3D_c72ok")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ossu4"]
+
+[node name="Criminal" type="CharacterBody3D" unique_id=1615060031]
+
+[node name="CriminalMesh" type="MeshInstance3D" parent="." unique_id=867978605]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_ossu4")
+
+[node name="Eyes" type="MeshInstance3D" parent="CriminalMesh" unique_id=274454070]
+transform = Transform3D(0.5628287, 0, 0, 0, 0.18196335, 0, 0, 0, 0.35156125, 0, 0.4085455, -0.40043876)
+mesh = SubResource("BoxMesh_ossu4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=178902523]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_ossu4")
+
+[node name="AiNavigationComponent" type="Node" parent="." unique_id=1804181985 node_paths=PackedStringArray("nav_agent", "body")]
+script = ExtResource("1_ld7n5")
+nav_agent = NodePath("../NavigationAgent3D")
+body = NodePath("..")
+metadata/_custom_type_script = "uid://d0ymghcv2c51s"
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1272209524]
+
+[node name="MovementComponent" type="Node" parent="." unique_id=1827782825 node_paths=PackedStringArray("body")]
+script = ExtResource("2_0vjw1")
+body = NodePath("..")
+speed = 0.6
+metadata/_custom_type_script = "uid://bgvy0s1ugj18x"

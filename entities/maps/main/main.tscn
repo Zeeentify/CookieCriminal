@@ -6,6 +6,7 @@
 [ext_resource type="Material" uid="uid://dvd6hg4fqn4tj" path="res://trenchbroom/textures/wall_6.tres" id="4_q8hqq"]
 [ext_resource type="Material" uid="uid://cvdripcdicyir" path="res://trenchbroom/textures/floor_2_tiles.tres" id="5_wp2ly"]
 [ext_resource type="Material" uid="uid://v1oevgi8yq64" path="res://trenchbroom/textures/floor_1.tres" id="6_ruk62"]
+[ext_resource type="PackedScene" uid="uid://yxtk00irenq0" path="res://entities/criminal/criminal.tscn" id="7_jflv0"]
 [ext_resource type="PackedScene" uid="uid://h31tot4yfifw" path="res://entities/maps/main/sub_scenes/bed/Bed.blend" id="8_jswjf"]
 [ext_resource type="PackedScene" uid="uid://hpeqekpwgso8" path="res://entities/maps/main/sub_scenes/bedside_table/night_table.blend" id="9_0tosw"]
 [ext_resource type="PackedScene" uid="uid://v2wtkcd3qpyb" path="res://entities/maps/main/sub_scenes/tv/tv.tscn" id="9_ontxy"]
@@ -92,8 +93,6 @@ points = PackedVector3Array(-2.75, 3.5, 4.25, -2.75, 2.5, 4.25, -3, 3.5, 4.25, -
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_k8jnu"]
 points = PackedVector3Array(-2.75, 1.25, 4.25, -2.75, 0, 4.25, -3, 1.25, 4.25, -3, 0, 4.25, -2.75, 1.25, 3.5, -2.75, 0, 3.5, -3, 1.25, 3.5, -3, 0, 3.5)
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_ossu4"]
-
 [node name="Main" type="Node3D" unique_id=2093638446]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=647737320]
@@ -143,9 +142,8 @@ shape = SubResource("ConvexPolygonShape3D_olcy7")
 [node name="entity_0_brush_8_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_0_worldspawn" unique_id=702563741]
 shape = SubResource("ConvexPolygonShape3D_k8jnu")
 
-[node name="RefMesh" type="MeshInstance3D" parent="." unique_id=562842236]
-transform = Transform3D(0.117971145, 0, 0.993017, 0, 1, 0, -0.993017, 0, 0.117971145, -1.8140547, 1.4409798, 4.948183)
-mesh = SubResource("CapsuleMesh_ossu4")
+[node name="Criminal" parent="." unique_id=867978605 instance=ExtResource("7_jflv0")]
+transform = Transform3D(0.117971145, 0, 0.993017, 0, 1, 0, -0.993017, 0, 0.117971145, -1.8140547, 0.4493891, 4.948183)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=2031202159]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10542023, 1.2727315, 3.82162)
