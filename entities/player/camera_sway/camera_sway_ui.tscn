@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d0s44noisqquh"]
 
-[ext_resource type="Script" uid="uid://bpim257f4yk4j" path="res://epiccamera.gd" id="1_ow26k"]
+[ext_resource type="Script" uid="uid://bpim257f4yk4j" path="res://entities/player/camera_sway/camera_sway.gd" id="1_ow26k"]
 
 [node name="CameraSwayUi" type="Control" unique_id=1997500140]
 layout_mode = 3
