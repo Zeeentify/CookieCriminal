@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://k8qip76wep40"]
+
+[ext_resource type="PackedScene" uid="uid://pv5dxu6m5ypl" path="res://entities/toy_phone/toy_phone1.blend" id="1_l6dch"]
+
+[node name="ToyPhone" type="Node3D" unique_id=445015175]
+
+[node name="toy_phone1" parent="." unique_id=1691842458 instance=ExtResource("1_l6dch")]

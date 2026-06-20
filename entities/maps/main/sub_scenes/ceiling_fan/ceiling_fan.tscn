@@ -1,7 +1,20 @@
 [gd_scene format=3 uid="uid://cca1egqnnxr45"]
 
 [ext_resource type="PackedScene" uid="uid://lm6iav3qcrhh" path="res://entities/maps/main/sub_scenes/ceiling_fan/ceiling_fan.blend" id="1_m8yjh"]
+[ext_resource type="Script" uid="uid://bxy5tytu8vokn" path="res://entities/components/const_rotation_component.gd" id="2_yb3l1"]
 
 [node name="CeilingFan" type="Node3D" unique_id=1758494838]
 
 [node name="ceiling_fan" parent="." unique_id=467150277 instance=ExtResource("1_m8yjh")]
+
+[node name="ceiling_fan_mp_2_1_light_on_blades" parent="ceiling_fan/ceiling_fan_mp_2_1_light_on" parent_id_path=PackedInt32Array(467150277, 212320306) index="0" unique_id=1161918260]
+transform = Transform3D(-0.9925888, 0, -0.12188521, 0, 1.0000025, 0, 0.121884964, 0, -0.99258244, 0, -0.5250001, 0)
+
+[node name="ConstRotationComponent" type="Node" parent="ceiling_fan" unique_id=2037679605 node_paths=PackedStringArray("object")]
+script = ExtResource("2_yb3l1")
+rotation_angle = Vector3(0, 1, 0)
+object = NodePath("../ceiling_fan_mp_2_1_light_on/ceiling_fan_mp_2_1_light_on_blades")
+speed = 8.0
+metadata/_custom_type_script = "uid://bxy5tytu8vokn"
+
+[editable path="ceiling_fan"]
