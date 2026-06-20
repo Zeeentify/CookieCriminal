@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://dxsbthm2m3jd3" path="res://entities/maps/main/sub_scenes/clock/clock.tscn" id="11_q8hqq"]
 [ext_resource type="PackedScene" uid="uid://cca1egqnnxr45" path="res://entities/maps/main/sub_scenes/ceiling_fan/ceiling_fan.tscn" id="12_wp2ly"]
 [ext_resource type="PackedScene" uid="uid://bfx8vugtdkc7t" path="res://entities/player/player.tscn" id="13_ruk62"]
+[ext_resource type="Texture2D" uid="uid://px6tkw6ar2gi" path="res://material/images.jpg" id="15_jswjf"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_ossu4"]
 vertices = PackedVector3Array(-3.5, 4, 0.25, -3.5, 4, 5.75, 2.5, 4, 5.75, 2.5, 4, 0.25, -2.25, 1, 1, -2.25, 1, 5.25, 1.25, 1, 5.25, 1.25, 1, 1)
@@ -97,6 +98,13 @@ background_mode = 2
 background_energy_multiplier = 0.03
 sky = SubResource("Sky_7g1hj")
 glow_enabled = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_7y36c"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_024il"]
+albedo_texture = ExtResource("15_jswjf")
+uv1_scale = Vector3(2.115, 2.115, 2.115)
+uv1_offset = Vector3(0.755, 0, 0)
 
 [node name="Main" type="Node3D" unique_id=2093638446]
 
@@ -195,5 +203,14 @@ transform = Transform3D(-0.99880934, 0, 0.048784047, 0, 1, 0, -0.048784047, 0, -
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8074445, 0.90338576, 4.640312)
 
 [node name="Props" type="Node3D" parent="." unique_id=680121840]
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="." unique_id=309942157]
+transform = Transform3D(0.9590304, 0, 0, 0, 1, 0, 0, 0, 0.123458564, 0, 1.889934, 5.444205)
+mesh = SubResource("BoxMesh_7y36c")
+
+[node name="CSGMesh3D2" type="CSGMesh3D" parent="." unique_id=1831203397]
+transform = Transform3D(0.9590304, 0, 0, 0, 1, 0, 0, 0, 0.123458564, 0, 1.889934, 5.444205)
+mesh = SubResource("BoxMesh_7y36c")
+material = SubResource("StandardMaterial3D_024il")
 
 [editable path="Player"]

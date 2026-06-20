@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://crrsojuwvxmod"]
+
+[ext_resource type="Script" path="res://epiccamera.gd" id="1_am4cr"]
+
+[node name="Control" type="Control" unique_id=1997500140]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_am4cr")
+
+[node name="Button" type="Button" parent="." unique_id=13919211]
+process_priority = 12
+modulate = Color(1, 1, 1, 0)
+z_index = 8
+custom_minimum_size = Vector2(100, 1.835)
+layout_mode = 1
+offset_right = 100.0
+offset_bottom = 638.0
+
+[node name="Button2" type="Button" parent="." unique_id=1136350091]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.011000001
+offset_left = 990.0
+offset_top = 2.0
+offset_right = 1139.328
+offset_bottom = 651.0
+
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="Button2" to="." method="_on_button_2_mouse_entered"]
+[connection signal="mouse_exited" from="Button2" to="." method="_on_button_2_mouse_exited"]
