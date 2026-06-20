@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cgpb5jhaaj7eo"]
+
+[ext_resource type="PackedScene" uid="uid://tesivoal0gvg" path="res://entities/maps/main/sub_scenes/door/door.blend" id="1_ty5yy"]
+
+[node name="Door" type="Node3D" unique_id=1057028376]
+
+[node name="door" parent="." unique_id=1101104762 instance=ExtResource("1_ty5yy")]
