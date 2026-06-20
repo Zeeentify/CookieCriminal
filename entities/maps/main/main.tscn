@@ -147,9 +147,6 @@ shape = SubResource("ConvexPolygonShape3D_k8jnu")
 transform = Transform3D(0.117971145, 0, 0.993017, 0, 1, 0, -0.993017, 0, 0.117971145, 0, 1.44098, 4.9218287)
 mesh = SubResource("CapsuleMesh_ossu4")
 
-[node name="RefCam" type="Camera3D" parent="." unique_id=28958441]
-transform = Transform3D(-0.99440956, 0, -0.10559222, 0, 1, 0, 0.10559221, 0, -0.99440956, -0.69471294, 0.762017, 0.98535657)
-
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=2031202159]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10542023, 1.2727315, 3.82162)
 light_color = Color(0.70858395, 0.61306435, 0.49380338, 1)
@@ -184,3 +181,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.60616946, 2.2052674, 3.463
 
 [node name="Node3D" parent="." unique_id=384399534 instance=ExtResource("13_ruk62")]
 transform = Transform3D(-0.99880934, 0, 0.048784047, 0, 1, 0, -0.048784047, 0, -0.99880934, -0.59739053, 0.6107697, 1.5392499)
+
+[editable path="Node3D"]
