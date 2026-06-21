@@ -3,6 +3,9 @@ extends Node
 signal input_disabled
 signal input_enabled
 
+
+signal disable_current_world_interactable
+
 #signal camera_input_disabled
 #signal camera_input_enabled
 

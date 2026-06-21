@@ -4,7 +4,9 @@ signal input_interacted
 signal input_throw
 signal input_escape
 var input_direction : Vector2
-
+func _input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed("interact"):
+		input_interacted.emit()
 func _unhandled_input(event: InputEvent) -> void:
 	if GameUtils.is_disabled(self): return
 	

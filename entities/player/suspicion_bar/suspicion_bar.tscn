@@ -1,7 +1,5 @@
 [gd_scene format=3 uid="uid://gq47b25gs4tg"]
 
-[ext_resource type="Script" path="res://entities/player/suspicion_bar/soundscripz.gd" id="1_httbr"]
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_httbr"]
 
 [node name="Control" type="Control" unique_id=675778821]
@@ -26,7 +24,6 @@ step = 0.0
 value = 1.0
 fill_mode = 3
 show_percentage = false
-script = ExtResource("1_httbr")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=289175194]
 visible = false

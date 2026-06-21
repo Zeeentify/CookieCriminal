@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://6646jsj8ayhy"]
+
+[ext_resource type="Texture2D" uid="uid://bitadchisnscp" path="res://entities/toy_phone/textures/ToyPhoneMat Layer_grayscale.png" id="1_reuqd"]
+
+[resource]
+resource_name = "ToyPhoneMat"
+cull_mode = 2
+albedo_texture = ExtResource("1_reuqd")
+roughness = 0.5
+metadata/extras = {
+"yp": {
+"active_ypaint_node": "Group",
+"expand_content": 0.0,
+"ori_bsdf": "",
+"ori_bsdf_output_index": 0.0
+}
+}
+metadata/_gltf_primary_texture_coord = 0

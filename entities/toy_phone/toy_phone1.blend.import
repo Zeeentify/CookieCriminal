@@ -40,6 +40,24 @@ materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
 _subresources={
+"materials": {
+"ToyPhoneMat": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://entities/toy_phone/ToyPhoneMat.tres",
+"use_external/path": "uid://6646jsj8ayhy"
+}
+},
+"meshes": {
+"toy_phone1_Cylinder_004": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://entities/toy_phone/meshes/toy_phone1_Cylinder_004.res",
+"save_to_file/path": "uid://rdrws0837l8m"
+}
+},
 "nodes": {
 "PATH:RotatingThing": {
 "import/skip_import": true

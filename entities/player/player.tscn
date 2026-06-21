@@ -1,19 +1,32 @@
 [gd_scene format=3 uid="uid://bfx8vugtdkc7t"]
 
+[ext_resource type="Script" uid="uid://biilyqujjbcge" path="res://entities/player/player.gd" id="1_fkugw"]
+[ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="2_26q78"]
 [ext_resource type="PackedScene" uid="uid://d0s44noisqquh" path="res://entities/player/camera_sway/camera_sway_ui.tscn" id="2_sglur"]
 [ext_resource type="PackedScene" uid="uid://o62a6iahpudn" path="res://entities/player/suspicion_bar/suspicion_meter.tscn" id="3_bls4j"]
 [ext_resource type="Script" uid="uid://kfmoj4u7ivn8" path="res://entities/components/input_component.gd" id="4_bls4j"]
 [ext_resource type="Script" uid="uid://cx0usxsi12ff0" path="res://entities/components/mouse_world_interactor.gd" id="4_fkugw"]
+[ext_resource type="Script" uid="uid://doqxerkkwxbq0" path="res://entities/components/component_enabler_component.gd" id="5_bectd"]
+[ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="7_bectd"]
+[ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="8_wvtmh"]
 
-[node name="Player" type="Node3D" unique_id=384399534]
+[sub_resource type="Resource" id="Resource_7thud"]
+script = ExtResource("8_wvtmh")
+
+[node name="Player" type="Node3D" unique_id=384399534 node_paths=PackedStringArray("input_component", "mouse_world_interactor", "mouse_world_interactor_enabler_component")]
+script = ExtResource("1_fkugw")
+input_component = NodePath("InputComponent")
+mouse_world_interactor = NodePath("MouseWorldInteractor")
+mouse_world_interactor_enabler_component = NodePath("MouseWorldInteractor/ComponentEnablerComponent")
 
 [node name="MainCam" type="Camera3D" parent="." unique_id=982517282]
-transform = Transform3D(1, 0, 0, 0, 0.99939084, -0.034899496, 0, 0.034899496, 0.99939084, 0.025, 0.012, 0)
+top_level = true
 
-[node name="SuspicionBar" parent="MainCam" unique_id=675778821 instance=ExtResource("3_bls4j")]
-
-[node name="CameraSwayUi" parent="MainCam" unique_id=1997500140 node_paths=PackedStringArray("camera_3d") instance=ExtResource("2_sglur")]
-camera_3d = NodePath("..")
+[node name="PhantomCameraHost" type="Node" parent="MainCam" unique_id=562538623]
+process_priority = 300
+process_physics_priority = 300
+script = ExtResource("2_26q78")
+metadata/_custom_type_script = "uid://bd046eokvcnu2"
 
 [node name="InputComponent" type="Node" parent="." unique_id=1334977801]
 script = ExtResource("4_bls4j")
@@ -23,3 +36,18 @@ metadata/_custom_type_script = "uid://kfmoj4u7ivn8"
 script = ExtResource("4_fkugw")
 interaction_length = 25.0
 metadata/_custom_type_script = "uid://cx0usxsi12ff0"
+
+[node name="ComponentEnablerComponent" type="Node" parent="MouseWorldInteractor" unique_id=1936082103]
+script = ExtResource("5_bectd")
+metadata/_custom_type_script = "uid://doqxerkkwxbq0"
+
+[node name="SuspicionBar" parent="." unique_id=675778821 instance=ExtResource("3_bls4j")]
+
+[node name="CameraSwayUi" parent="." unique_id=1997500140 node_paths=PackedStringArray("camera_3d") instance=ExtResource("2_sglur")]
+camera_3d = NodePath("../MainCam")
+
+[node name="PhantomCamera3D" type="Node3D" parent="." unique_id=1452855870]
+script = ExtResource("7_bectd")
+priority = 1
+tween_resource = SubResource("Resource_7thud")
+metadata/_custom_type_script = "uid://csjccrhj5wnx7"

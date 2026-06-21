@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://cca1egqnnxr45" path="res://entities/maps/main/sub_scenes/ceiling_fan/ceiling_fan.tscn" id="12_wp2ly"]
 [ext_resource type="PackedScene" uid="uid://bfx8vugtdkc7t" path="res://entities/player/player.tscn" id="13_ruk62"]
 [ext_resource type="Texture2D" uid="uid://px6tkw6ar2gi" path="res://material/images.jpg" id="15_jswjf"]
+[ext_resource type="PackedScene" uid="uid://k8qip76wep40" path="res://entities/toy_phone/toy_phone.tscn" id="17_y52oi"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_ossu4"]
 vertices = PackedVector3Array(-3.5, 4, 0.25, -3.5, 4, 5.75, 2.5, 4, 5.75, 2.5, 4, 0.25, -2.25, 1, 1, -2.25, 1, 5.25, 1.25, 1, 5.25, 1.25, 1, 1)
@@ -257,7 +258,7 @@ light_color = Color(0.99228555, 0.87195086, 0.8104401, 1)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.60616946, 2.2052674, 3.4636288)
 
 [node name="Player" parent="." unique_id=384399534 instance=ExtResource("13_ruk62")]
-transform = Transform3D(-0.99880934, 0, 0.048784047, 0, 1, 0, -0.048784047, 0, -0.99880934, -0.59739053, 0.6107697, 1.5392499)
+transform = Transform3D(-0.99443215, 0, 0.10537975, 0.011431326, 0.9940989, 0.10787346, -0.1047579, 0.10847747, -0.9885639, -0.3442738, 0.68830305, 1.5392499)
 
 [node name="CriminalPossibleLocationMarkers" type="Node3D" parent="." unique_id=536512939]
 
@@ -267,12 +268,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8074445, 0.90338576, 4.6403
 [node name="Props" type="Node3D" parent="." unique_id=680121840]
 
 [node name="CSGMesh3D" type="CSGMesh3D" parent="." unique_id=309942157]
-transform = Transform3D(0.9590304, 0, 0, 0, 1, 0, 0, 0, 0.123458564, 0, 1.889934, 5.444205)
+transform = Transform3D(0.8030011, 0, 0, 0, 0.8373052, 0, 0, 0, 0.123458564, -1.3540474, 2.2473373, 5.444205)
 mesh = SubResource("BoxMesh_7y36c")
 
 [node name="CSGMesh3D2" type="CSGMesh3D" parent="." unique_id=1831203397]
-transform = Transform3D(0.9590304, 0, 0, 0, 1, 0, 0, 0, 0.123458564, 0, 1.889934, 5.444205)
+transform = Transform3D(0.8030011, 0, 0, 0, 0.8373052, 0, 0, 0, 0.123458564, -1.3540474, 2.2473373, 5.444205)
 mesh = SubResource("BoxMesh_7y36c")
 material = SubResource("StandardMaterial3D_024il")
+
+[node name="ToyPhone" parent="." unique_id=445015175 instance=ExtResource("17_y52oi")]
+transform = Transform3D(0.16120142, 0, 0.19108663, 0, 0.25, 0, -0.19108663, 0, 0.16120142, -0.7311408, 0.4989522, 1.9636316)
 
 [editable path="Player"]
