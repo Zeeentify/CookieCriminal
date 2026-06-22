@@ -7,7 +7,8 @@
 [ext_resource type="Script" uid="uid://doqxerkkwxbq0" path="res://entities/components/component_enabler_component.gd" id="4_gfgag"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="4_m27a5"]
 [ext_resource type="Script" uid="uid://cx0usxsi12ff0" path="res://entities/components/mouse_world_interactor.gd" id="7_o7ev5"]
-[ext_resource type="ArrayMesh" uid="uid://d0fvfehkkicah" path="res://entities/toy_phone/meshes/toy_phone1_Cylinder_004.res" id="8_e61g1"]
+[ext_resource type="ArrayMesh" uid="uid://rdrws0837l8m" path="res://entities/toy_phone/meshes/toy_phone1_Cylinder_004.res" id="8_e61g1"]
+[ext_resource type="Script" uid="uid://kfmoj4u7ivn8" path="res://entities/components/input_component.gd" id="9_x2ghj"]
 
 [sub_resource type="Resource" id="Resource_gfgag"]
 script = ExtResource("4_m27a5")
@@ -16,16 +17,18 @@ script = ExtResource("4_m27a5")
 height = 0.032916732
 radius = 0.168982
 
-[node name="ToyPhone" type="Node3D" unique_id=445015175 node_paths=PackedStringArray("mouse_world_interactable", "phantom_cam", "mouse_world_interactor", "mouse_world_interactor_enabler_component")]
+[node name="ToyPhone" type="Node3D" unique_id=445015175 node_paths=PackedStringArray("mouse_world_interactable", "phantom_cam", "rotating_thing_mouse_world_interactable", "mouse_world_interactor", "mouse_world_interactor_enabler_component", "input_component")]
 script = ExtResource("1_m27a5")
 mouse_world_interactable = NodePath("MouseWorldInteractable")
 phantom_cam = NodePath("PhantomCamera3D")
+rotating_thing_mouse_world_interactable = NodePath("RotatingThing/MouseWorldInteractable")
 mouse_world_interactor = NodePath("MouseWorldInteractor")
 mouse_world_interactor_enabler_component = NodePath("MouseWorldInteractor/ComponentEnablerComponent")
+input_component = NodePath("InputComponent")
 
 [node name="toy_phone1" parent="." unique_id=1691842458 instance=ExtResource("1_l6dch")]
 
-[node name="RotatingThing_001" parent="toy_phone1" index="6" unique_id=802045577]
+[node name="RotatingThing_001" parent="toy_phone1" index="6" unique_id=876006128]
 visible = false
 
 [node name="MouseWorldInteractable" type="Node" parent="." unique_id=1522375944 node_paths=PackedStringArray("object")]
@@ -54,7 +57,7 @@ enabled = false
 metadata/_custom_type_script = "uid://doqxerkkwxbq0"
 
 [node name="RotatingThing" type="AnimatableBody3D" parent="." unique_id=2033587487]
-transform = Transform3D(1.681976, 0.3349356, 0, -0.3349356, 1.681976, 0, 0, 0, 1.715, 0.114190325, 0.5476268, -0.0044431984)
+transform = Transform3D(1.6817542, 0.33604765, 2.9986012e-07, -0.33604765, 1.6817542, 0, -2.9404723e-07, -5.8756434e-08, 1.715, 0.114190325, 0.5476268, -0.0044431984)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RotatingThing" unique_id=473779801]
 mesh = ExtResource("8_e61g1")
@@ -62,5 +65,19 @@ mesh = ExtResource("8_e61g1")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RotatingThing" unique_id=874131789]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.02297954, 0)
 shape = SubResource("CylinderShape3D_x2ghj")
+
+[node name="MouseWorldInteractable" type="Node" parent="RotatingThing" unique_id=390299848 node_paths=PackedStringArray("object")]
+script = ExtResource("2_fxl6x")
+object = NodePath("..")
+metadata/_custom_type_script = "uid://ctfbp4jlgwgck"
+
+[node name="InputComponent" type="Node" parent="." unique_id=350061857]
+script = ExtResource("9_x2ghj")
+metadata/_custom_type_script = "uid://kfmoj4u7ivn8"
+
+[node name="ComponentEnablerComponent" type="Node" parent="InputComponent" unique_id=1490006570]
+script = ExtResource("4_gfgag")
+enabled = false
+metadata/_custom_type_script = "uid://doqxerkkwxbq0"
 
 [editable path="toy_phone1"]

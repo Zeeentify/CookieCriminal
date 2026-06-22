@@ -2,6 +2,9 @@ class_name MouseWorldInteractor extends Node
 
 @export var interaction_length : float = 100.0
 signal clicked(mouse_world_interactable : MouseWorldInteractable)
+signal dragged(mouse_world_interactable : MouseWorldInteractable)
+signal mouse_downed(mouse_world_interactable : MouseWorldInteractable)
+signal mouse_upped(mouse_world_interactable : MouseWorldInteractable)
 var mouse_world_interactable : MouseWorldInteractable
 
 func _process(delta: float) -> void:
@@ -26,7 +29,14 @@ func click()->void:
 	if mouse_world_interactable:
 		mouse_world_interactable.clicked.emit()
 		clicked.emit(mouse_world_interactable)
-func dragging()->void:
+
+func mouse_down()->void:
+	mouse_downed.emit(mouse_world_interactable)
+	print("mouse downed", mouse_world_interactable.name)
+func mouse_up()->void:
+	mouse_upped.emit(mouse_world_interactable)
+	print("mouse upped", mouse_world_interactable.name)
+func _dragging()->void:
 	if mouse_world_interactable:
 		mouse_world_interactable.dragging()
-			
+		dragged.emit(mouse_world_interactable)

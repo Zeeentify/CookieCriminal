@@ -1,6 +1,7 @@
 class_name MouseWorldInteractable extends Node
 
 signal clicked
+signal dragged
 @export var object : Node3D
 @export var reparent_to_object : bool = false
 func _ready() -> void:
@@ -10,4 +11,4 @@ func _ready() -> void:
 
 
 func dragging()->void:
-	pass
+	dragged.emit()

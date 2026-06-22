@@ -1,7 +1,7 @@
 extends Node
 
 signal input_disabled
-signal input_enabled
+#signal input_enabled
 
 
 signal disable_current_world_interactable
